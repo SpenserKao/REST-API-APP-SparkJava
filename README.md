@@ -23,7 +23,7 @@ Meanwhile, auto software building tool _Gradle v4.10.2_ has been utilised.
 
 ## Execution and testing locally
 Once extracted onto a working directory, change into that directory, then execute following command:</br>
-__java -Dserver.port=8001 -jar build/libs/addressbook-all-1.5.1.jar__</br>
+**java -Dserver.port=8001 -jar build/libs/addressbook-all-1.5.1.jar**</br>
 Where the options are</br>
 -h to print help message.</br>
 -d for XML-based database files to load. Should it be omitted, _~/db/default-db.xml_ inside the jar file would be loaded by default.</br>
