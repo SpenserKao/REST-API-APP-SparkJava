@@ -83,7 +83,7 @@ public class AddressBook {
 			}
 		}
 
-        // Configure the routes
+        // Configure the routes - thru three parts: verb, path and callback.
     	get("/addressbook", (req, res) -> {
 			return welcomeMsgEndpointsList();
     	}); 
