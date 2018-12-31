@@ -20,7 +20,7 @@ Once extracted onto a working directory, change into that directory, then execut
 __java -Dserver.port=8001 -jar build/libs/addressbook-all-1.5.1.jar__</br>
 Where the options are</br>
 -h to print help message.</br>
--d for XML-based database files to load. When omitted, _~/db/default-db.xml_ inside the jar file will be loaded by default.</br>
+-d for XML-based database files to load. Should it be omitted, _~/db/default-db.xml_ inside the jar file would be loaded by default.</br>
 
 Then through a web browser, open following URL for testing:</br>
 [http://localhost:8001/addressbook](http://localhost:8001/addressbook)
