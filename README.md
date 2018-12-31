@@ -10,7 +10,7 @@ Welcome to the AddressBook - a SparkJava-based REST API application.
 ## Language, framework, template and tool
 The REST API application is built upon:
    * _Java v1.8.0_05_, 
-   * _SparkJava v2.7.2_ - an open-source web server _Jetty_-embedded web application framework, and 
+   * _SparkJava v2.7.2_ - an open-source web application framework that is embedded with web server _Jetty_, and 
    * _Apache Veolcity_ - a SparkJava-supported template engine to handle message's presentation to fulfill model-view-Controller (MVC) design pattern.</br>
 
 Meanwhile, auto software building tool _Gradle v4.10.2_ has been utilised.
