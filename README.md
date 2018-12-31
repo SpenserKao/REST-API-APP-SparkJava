@@ -17,7 +17,7 @@ Meanwhile, auto software building tool _Gradle v4.10.2_ has been utilised. File 
 
 ## Execution and testing locally
 Once extracted onto a working directory, change into that directory, then execute following command:</br>
-***java -Dserver.port=8001 -jar build/libs/addressbook-all-1.5.1.jar***</br>
+***java -Dserver.port=8001 -jar build/libs/addressbook-all-1.6.0.jar***</br>
 Where the options are</br>
 -h to print help message.</br>
 -d for XML-based database files to load. If omitted, _~/db/default-db.xml_ inside the jar file would be loaded by default.</br>
@@ -28,3 +28,13 @@ Then through a web browser, open following URL for testing:</br>
 ## Hosting remotely
 The application is currently being hosted by www.heroku.com with following URL<br/>
 [rest-api-app-sparkjava.herokuapp.com/addressbook](https://rest-api-app-sparkjava.herokuapp.com/addressbook)
+
+### Deployment to Heroku
+Unlike locally deployment, there are more details to emphasise to the remote server.</br> 
+File _Procfile_, whose content is shown below, serves a critial purpose on how deployment should be treated by server _Heroku_.
+___web: java $JAVA_OPTS -Dserver.port=$PORT -jar build/libs/addressbook-all-1.6.0.jar___
+
+It critically tells _Heroku_ server that
+   * the deployment is a web application,
+   * to execute the application through the specified jar file, and
+   * the port numner is to be assigned by the server through property _server.port_.

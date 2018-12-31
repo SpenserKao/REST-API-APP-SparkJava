@@ -7,7 +7,7 @@ plugins {
 }
 
 group 'com.spenserkao.addressbook'
-version '1.5.1'
+version '1.6.0'
 description = "addressbook's building, unit test and integration test."
 
 repositories {

@@ -1,7 +1,7 @@
 <html>
 	#include( "templates/header.html" )
 	<body>
-		<h2>Address Book #if ($latestVersion) ver. $latestVersion #end</h2>
+		<h2>Address Book #if ($latestVersion) v$latestVersion #end</h2>
 		#if ($summary)
 			<p>$summary</p>
 		#end
