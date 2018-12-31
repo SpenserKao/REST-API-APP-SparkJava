@@ -1,0 +1,35 @@
+{
+	"Release Note": [
+		{
+			"@Version": "1.6.0", 
+			"@Description": "Implemented <em>save</em> route."
+		},{
+			"@Version": "1.5.1", 
+			"@Description": "Supported <em>HTML format elements</em> in <em>Velocity Template</em>-based message."
+		},		
+		{
+			"@Version": "1.5.0", 
+			"@Description": "Used <em>Velocity template</em>, in junction with <em>JSON</em>, for HTMLising message."
+		},
+		{
+			"@Version": "1.4.0",
+			"@Description": "Eliminated warning message 'Failed to load class org.slf4j.impl.StaticLoggerBinder'."
+		}, 
+		{
+			"@Version": "1.3.0",
+			"@Description" : "Used css for stylising table info."
+		}, 
+		{
+			"@Version": "1.2.0",
+			"@Description": "Used port assignment instead of default one."
+		}, 
+		{
+			"@Version": "1.1.0",
+			"@Description": "Implemented <em>about</em> route."
+		},
+		{
+			"@Version": "1.0.0",
+			"@Description": "First release of the <em>SparkJava</em>-based REST API app."
+		}
+	]
+}

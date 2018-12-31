@@ -1,0 +1,162 @@
+// Theplugins block must be at top of the script, unless it is below buildscript block
+plugins {
+    id 'java'
+    id 'groovy'  // a must for task 'compileGroovy'
+    id 'maven-publish' // Must-have for publisng to local
+    id 'distribution'   // for distZip and distTar tasks
+}
+
+group 'com.spenserkao.addressbook'
+version '1.5.1'
+description = "addressbook's building, unit test and integration test."
+
+repositories {
+    mavenLocal()
+    maven { url "http://central.maven.org/maven2/" }
+    maven { url "https://mvnrepository.com/artifact" } 
+    maven { url "http://repo1.maven.org/maven2" }
+    maven { url 'https://jitpack.io' }
+    jcenter { url "http://jcenter.bintray.com/" }   
+}
+
+ext {
+    junitVersion='4.12'
+    //DBG mockitoVersion='1.8.4'
+    systemRulesVersion='1.18.0'
+}
+
+allprojects {
+    gradle.projectsEvaluated {
+        tasks.withType(JavaCompile) {
+            options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+        }
+    }
+}
+
+configurations {
+    // configuration that holds jars to include in the jar
+    extraLibs
+}
+  
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java']
+        }
+        resources {
+            srcDirs = ['src/main/resources']
+        }
+    }
+    test {
+        groovy {
+            srcDirs = ['src/test/groovy']
+        }
+        resources {
+            srcDirs = ['src/test/resources']
+        } 
+    }
+}
+
+configurations {
+   groovyDoc    // Ref: [1]
+}
+
+dependencies {
+    compile (
+        'com.sparkjava:spark-core:2.7.2',
+        'org.slf4j:slf4j-simple:1.7.21',
+        'com.sparkjava:spark-template-velocity:2.7.1',
+        'com.googlecode.json-simple:json-simple:1.1.1',
+        'com.github.cliftonlabs:json-simple:2.2.0' 
+    )
+}
+
+defaultTasks 'clean', 'compileJava', 'javadoc', 'jar', 'fatJar', 'publishToMavenLocal' // 'groovyDoc', 
+
+publishing {
+    publications {
+        addressbook(MavenPublication) {
+            groupId 'com.spenserkao.addressbook'
+            artifactId 'addressbook'
+            artifact jar            
+        }
+    }
+}
+
+/**
+ * Note: 
+ *  due to dependency on 3rd-part lib, execution of this jar expects to receive following error:
+ *  java.lang.NoClassDefFoundError: spark/Request
+ * Hence, delverable of task fatJar is the one to use.
+ */
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.spenserkao.addressbook.AddressBook',
+        'Implementation-Title': 'Address Book',
+        'Implementation-Version': version
+    }
+}
+
+task fatJar(type: Jar, dependsOn: [jar]) {
+    manifest {
+        attributes 'Main-Class': 'com.spenserkao.addressbook.AddressBook',
+        'Implementation-Title': 'Address Book',
+        'Implementation-Version': version
+    }
+    // till end of the block is for task fatJar
+    baseName = project.name + '-all'
+    // include 3rd-party libs
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar    
+}
+
+task pkg(type: Jar, dependsOn: []) {
+    from 'build/classes/main'
+    from 'build/resources/main' 
+    // Ref: Table 15.1 of Ch-15 of User Guid re "working w/ files"
+    //destinationDir is default to = project.buildDir/libs for archive type JAR and WAR, or
+    // project.buildDir/distributions for archive type ZIP and TAR.
+}
+
+/*
+publishing {
+    publications {
+        rules(MavenPublication) {
+            groupId 'au.gov.bom.wdtf'
+            artifactId 'validation-rules'   // 'wdtf-validation-rules'
+            artifact pkg            
+        }
+    }
+}
+*/
+
+// Refs: [1, 2, 3]
+groovydoc { 
+    groovyClasspath = configurations.groovyDoc
+    // [... , "src/integrationTest/groovy"]
+    source "src/test/groovy"   // <--- The most important property to find source code!
+    includePrivate false
+    windowTitle "Test Scripts of Address Book"
+    footer "Copyright 2018 Spenser Kao"
+    
+    // following properties are yet to be proven relevant!
+    /*
+    docTitle windowTitle
+    header "Place header message here"
+    overview "Overview of Vocab Lookup"
+    description "Copyright 2018 Spenser Kao"
+    use = true
+    */
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+/**
+ * Reference - for groovydoc:
+ * [1] http://grails.io/post/88656787208/generating-pretty-groovy-23-groovydocs-with
+ * [2] https://discuss.gradle.org/t/groovydoc-for-test-groovy-source-files/3926
+ * [3] https://docs.gradle.org/current/dsl/org.gradle.api.tasks.javadoc.Groovydoc.html
+ */
+
+                           

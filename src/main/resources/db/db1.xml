@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contacts>
+	<contact>
+		<fullname>Robin Williams</fullname>
+		<phone>+61387654321</phone>
+	</contact>
+	<contact>
+		<fullname>Clint Eastwood</fullname>
+		<phone>+61398765432</phone>
+	</contact>	
+</contacts>	

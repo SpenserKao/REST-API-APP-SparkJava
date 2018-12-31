@@ -1,0 +1,38 @@
+{		
+	"Registered Routes": [
+		{
+			"@Route": "/addressbook", 
+			"@Description": "Welcome message and this list of registered endpoints." 
+		},
+		{
+			"@Route": "/addressbook/about", 
+			"@Description": "Info about the application, including release note." 
+		},		
+		{
+			"@Route": "/addressbook/add?fullname=&lt;name&gt;&phone=&lt;phone&gt;", 
+			"@Description": "Adds a new contact with provided details. If found with same fullname, the existing contact will be overwritten by the addtion." 
+		},	
+		{
+			"@Route": "/addressbook/search/&lt;pattern&gt;", 
+			"@Description": 
+			"Searchs existing contact(s) with pattern, wildcard allowed, for instance, 
+			<ul><li>&lsquo;George Walker Bush&rsquo; for the name exactly matching with &lsquo;George Walker Bush&rsquo;,</li>
+			<li>&lsquo;George*&rsquo; for those names starting with &lsquo;George&rsquo;,</li>
+			<li>&lsquo;*Bush&rsquo; for those ending with &lsquo;Bush&rsquo;, </li>
+			<li>&lsquo;George*Bush&rsquo; for those starting with &lsquo;George*Bush&rsquo; and ending with &lsquo;Bush&rsquo;, and</li>
+			<li>&lsquo;*Herbert*&rsquo; for those with &lsquo;Herbert&rsquo; in the middle.</li></ul>" 
+		},	
+		{
+			"@Route": "/addressbook/remove/<pattern>", 
+			"@Description": "Removes existing contact(s) with abovementioned pattern." 
+		},
+		{
+			"@Route": "/addressbook/list", 
+			"@Description": "Lists all contacts." 
+		},
+		{
+			"@Route": "/addressbook/save", 
+			"@Description": "Updates the changes of contacts back to default database file, if loaded at the application's star-tup." 
+		}
+	]	
+}

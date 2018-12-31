@@ -1,0 +1,25 @@
+<html>
+	#include( "templates/header.html" )
+	<body>
+		<h2>Address Book #if ($latestVersion) ver. $latestVersion #end</h2>
+		#if ($summary)
+			<p>$summary</p>
+		#end
+		<table border='1'>
+			<thead>
+					<caption>$tableCaption</caption>
+					<tr><th>$columnHeadings[0]</th><th>$columnHeadings[1]</th></tr>
+			</thead>
+			<tbody>
+				#tablerows ( $keyVal_Pairs )
+			</tbody>
+		</table>
+	</body>
+</html>
+
+#macro( tablerows $keyVal_Pairs )
+	#set ($keyset = $keyVal_Pairs.keySet())
+	#foreach ($key in $keyset)
+		<tr><td>$key</td><td>$keyVal_Pairs.get($key)</td></tr>	
+	#end
+#end

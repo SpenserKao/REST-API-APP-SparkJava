@@ -1,5 +1,7 @@
+#### Generic settings from GitHub ####
 # Compiled class file
 *.class
+
 
 # Log file
 *.log
@@ -21,3 +23,17 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+#### End of Generic settings from GitHub ####
+
+# Customised settings
+build
+.gradle
+gradle
+gradlew
+gradlew.bat
+addressbook-all-1.5.1.jar
+doco/*.dia~
+doco/README.docx
+doco/README.pdf
+doco/TestPlan.pdf
+doco/WhatIs.pdf
