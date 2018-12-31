@@ -6,12 +6,6 @@ Welcome to the AddressBook - a SparkJava-based REST API application.
 
 ## Class Diagram
 ![Class Diagram](doco/img/ClassDiagram.jpeg)
-=======
-## System context diagram
-![System Context Diagram](doco/img/ContextDiagram.jpeg)
-
-## Class diagram
-![Class Diagram](doco/img/ClassDiagram.jpeg)
 
 ## Language, framework, template and tool
 The REST API application is built upon:
