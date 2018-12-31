@@ -33,7 +33,6 @@ gradlew
 gradlew.bat
 addressbook-all-1.5.1.jar
 doco/*.dia~
-doco/README.docx
-doco/README.pdf
-doco/TestPlan.pdf
+doco/README.*
+doco/TestPlan.*
 doco/WhatIs.pdf
