@@ -18,14 +18,13 @@ Meanwhile, auto software building tool _Gradle v4.10.2_ has been utilised.
 ## Execution and testing locally
 Once extracted onto a working directory, change into that directory, then execute following command:</br>
 __java -Dserver.port=8001 -jar build/libs/addressbook-all-1.5.1.jar__
-<pre>
-Where the options are
--h to print help message
--d for XML-based database files to load. By default, _~/db/default-db.xml_ will be loaded.
-</pre>
+Where the options are</br>
+-h to print help message</br>
+-d for XML-based database files to load. By default, _~/db/default-db.xml_ will be loaded.</br>
+
 Then through a web browser, open following URL for testing:</br>
 [http://localhost:8001/addressbook](http://localhost:8001/addressbook)
 
 ## Hosting
 The application is currently being hosted by www.heroku.com with following URL<br/>
-[rest-api-app-sparkjava](https://rest-api-app-sparkjava.herokuapp.com/addressbook)
+[rest-api-app-sparkjava.herokuapp.com/addressbook](https://rest-api-app-sparkjava.herokuapp.com/addressbook)
