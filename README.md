@@ -8,10 +8,10 @@ Welcome to the AddressBook - a SparkJava-based REST API application.
 ![Class Diagram](doco/img/ClassDiagram.jpeg)
 
 ## Language, framework, template and tool
-The application is built upon:
+The REST API application is built upon:
    * _Java v1.8.0_05_, 
-   * REST API framework _SparkJava v2.7.2_, and 
-   * _Veolcity Template_ which is supported by SparkJava.</br>
+   * _SparkJava v2.7.2_ - an open-source web server _Jetty_-embedded web application framework, and 
+   * _Apache Veolcity_ - a SparkJava-supported template engine to handle message's presentation to fulfill model-view-Controller MVC) design pattern.</br>
 
 Meanwhile, auto software building tool _Gradle v4.10.2_ has been utilised.
 
@@ -25,6 +25,6 @@ Where the options are</br>
 Then through a web browser, open following URL for testing:</br>
 [http://localhost:8001/addressbook](http://localhost:8001/addressbook)
 
-## Hosting
+## Hosting remotely
 The application is currently being hosted by www.heroku.com with following URL<br/>
 [rest-api-app-sparkjava.herokuapp.com/addressbook](https://rest-api-app-sparkjava.herokuapp.com/addressbook)
