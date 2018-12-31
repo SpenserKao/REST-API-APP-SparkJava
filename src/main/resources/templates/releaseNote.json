@@ -9,7 +9,7 @@
 		},		
 		{
 			"@Version": "1.5.0", 
-			"@Description": "Used <em>Velocity template</em>, in junction with <em>JSON</em>, for HTMLising message."
+			"@Description": "Used <em>Apache Velocity</em> template engine to handle message's presentation."
 		},
 		{
 			"@Version": "1.4.0",
