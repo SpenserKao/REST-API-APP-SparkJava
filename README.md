@@ -13,7 +13,7 @@ The REST API application is built upon:
    * _SparkJava v2.7.2_ - an open-source web application framework that is embedded with web server _Jetty_, and 
    * _Apache Veolcity_ - a SparkJava-supported template engine to handle message's presentation to fulfill model-view-Controller (MVC) design pattern.</br>
 
-Meanwhile, auto software building tool _Gradle v4.10.2_ has been utilised. _build.gradle_ is the configuration file of _Gradle_.
+Meanwhile, auto software building tool _Gradle v4.10.2_ has been utilised. File _build.gradle_ is for configuring _Gradle_.
 
 ## Execution and testing locally
 Once extracted onto a working directory, change into that directory, then execute following command:</br>
