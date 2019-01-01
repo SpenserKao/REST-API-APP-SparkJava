@@ -148,8 +148,8 @@ public class AddressBook {
 	 */	
 	@SuppressWarnings("unchecked")	
 	static String welcomeMsgEndpointsList() {
-		return j2tt.convert("templates/regRoutes.json", 
-		"Welcome to the AddressBook - a SparkJava-based REST API application. There are registed routes as tabled below.",
+		return j2tt.convert("templates/endPoints.json", 
+		"Welcome to the AddressBook - a SparkJava-based REST API application. There are endpoints created as follows.",
 		"Registered Routes", 
 		false);		// src/main/resources/
 	}
