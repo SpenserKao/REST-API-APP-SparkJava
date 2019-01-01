@@ -1,51 +1,52 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- For testing purpose, the names in the list are from move "The Godfathers, one of my favorites. The numbers are all fabricated. -->
 <contacts>
     <contact>
-        <fullname>Joy Kao</fullname>
+        <fullname>Marlon Brando</fullname>
         <phone>+61367894321</phone>
     </contact>
     <contact>
-        <fullname>Russell Crowe</fullname>
+        <fullname>Al Pacino</fullname>
         <phone>+61298765432</phone>
     </contact>
     <contact>
-        <fullname>Spenser H. Kao</fullname>
+        <fullname>James Caan</fullname>
         <phone>+61387654321</phone>
     </contact>
     <contact>
-        <fullname>John Kao</fullname>
+        <fullname>Richard S. Castellano</fullname>
         <phone>+61343215678</phone>
     </contact>
     <contact>
-        <fullname>John Spenser Smith</fullname>
+        <fullname>Robert Duvall</fullname>
         <phone>+61298765432</phone>
     </contact>
     <contact>
-        <fullname>Spenser Williams</fullname>
+        <fullname>Sterling Hayden</fullname>
         <phone>+61387654321</phone>
     </contact>
     <contact>
-        <fullname>Matt Demon</fullname>
+        <fullname>John Marley</fullname>
         <phone>+61284442211</phone>
     </contact>
     <contact>
-        <fullname>Clint Eastwood</fullname>
+        <fullname>Richard Conte</fullname>
         <phone>+61398765432</phone>
     </contact>
     <contact>
-        <fullname>George Walker Bush</fullname>
+        <fullname>Al Lettieri</fullname>
         <phone>+61377778888</phone>
     </contact>
     <contact>
-        <fullname>George Herbert Walker Bush</fullname>
+        <fullname>Diane Keaton</fullname>
         <phone>+61366559988</phone>
     </contact>
     <contact>
-        <fullname>Mary Kao</fullname>
+        <fullname>Abe Vigoda</fullname>
         <phone>+61387654321</phone>
     </contact>
     <contact>
-        <fullname>Robin Williams</fullname>
+        <fullname>Talia Shire</fullname>
         <phone>+61387654321</phone>
     </contact>
 </contacts>
