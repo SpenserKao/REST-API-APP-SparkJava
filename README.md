@@ -2,7 +2,7 @@
 Welcome to the AddressBook - a SparkJava-based REST API application.
 
 ## System Context Diagram
-![System Context Diagram](doco/img/ContextDiagram.jpeg)
+![System Context Diagram](doco/img/ContextDiagram.jpeg)</br>
 The property file, _AddressBook.properties_, contains a property _DEFAULT_DB_XML_FILE_ that points the default database named _default-db.xml_ to be loaded when no external data base(s) is/are through -d option. See Section "Execution and testing locally" for command syntax. </br>
 The file _endPoints.json_ records a list of created endpoints that is rendered into HTML form through _Apache Velocity_ template engine. So is _releaseNote.json_ for a list of release note.
 
