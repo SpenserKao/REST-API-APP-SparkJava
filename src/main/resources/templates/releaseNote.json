@@ -1,6 +1,9 @@
 {
 	"Release Note": [
 		{
+			"@Version": "1.6.1", 
+			"@Description": "Added new entry to default-db.xml."
+		},{
 			"@Version": "1.6.0", 
 			"@Description": "Implemented <em>save</em> route."
 		},{

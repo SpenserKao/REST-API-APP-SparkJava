@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -Dserver.port=$PORT -jar build/libs/addressbook-all-1.6.0.jar
+web: java $JAVA_OPTS -Dserver.port=$PORT -jar build/libs/addressbook-all-1.6.1.jar
