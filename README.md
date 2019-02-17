@@ -12,7 +12,7 @@ The file <i>endPoints.json</i> records a list of created endpoints that is rende
 ## Class Diagram
 ![Class Diagram](doco/img/ClassDiagram.jpeg)
 
-## Language, framework, template and tool
+## Language, Framework, Template and Tool
 The REST API application is built upon:
    * _Java v1.8.0_05_, 
    * _SparkJava v2.7.2_ - an open-source web application framework that is embedded with web server _Jetty_, and 
@@ -20,7 +20,7 @@ The REST API application is built upon:
 
 Meanwhile, auto software building tool _Gradle v4.10.2_ has been utilised, with _build.gradle_ as the default configuration file.
 
-## Execution and testing locally
+## Deployment, Execution and Testing Locally
 Once extracted onto a working directory, change into that directory, then execute following command:</br>
 ***java -Dserver.port=8001 -jar build/libs/addressbook-all-1.6.1.jar***</br>
 Where more options are available</br>
@@ -41,7 +41,7 @@ Unlike locally deployment, there are more details to emphasise to the remote ser
 File _Procfile_, whose content is shown below, serves a critial purpose on how deployment should be treated by server _Heroku_.
 ___web: java $JAVA_OPTS -Dserver.port=$PORT -jar build/libs/addressbook-all-1.6.1.jar___
 
-It critically tells _Heroku_ server that
+The _Procfile_'s content critically tells _Heroku_ server that
    * the deployment is a web application,
    * to execute the application through the specified jar file, and
    * the port numner is to be assigned by the server through property _server.port_.
