@@ -1,5 +1,5 @@
 # REST-API-APP-SparkJava
-Welcome to the AddressBook - a SparkJava-based REST API application.
+Welcome to the project of AddressBook - a SparkJava-based RESTfull API application.
 
 ## System Context Diagram
 ![System Context Diagram](doco/img/ContextDiagram.jpeg)
